@@ -43,7 +43,7 @@ function App() {
   return (
     <main className="app">
       <header className="header">
-        <h1>Kinetix</h1>
+        <h1>Parabola</h1>
         <p>Simulador de Lançamento de Projéteis</p>
       </header>
 
