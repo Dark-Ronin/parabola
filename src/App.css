@@ -21,6 +21,7 @@
 }
 
 .calculator {
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -47,12 +48,14 @@
 
 .input-unit input {
   width: 100%;
+  min-width: 0;
   padding: 13px 14px;
   border: 1px solid #444;
   border-radius: 8px;
   background: #181818;
   color: inherit;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .input-unit span {
@@ -61,6 +64,7 @@
 }
 
 button {
+  width: 100%;
   margin-top: 10px;
   padding: 14px 20px;
   border: none;
@@ -100,6 +104,7 @@ button:hover {
 }
 
 .result-card {
+  min-width: 0;
   padding: 22px;
   border: 1px solid #333;
   border-radius: 12px;
@@ -122,32 +127,6 @@ button:hover {
   opacity: 0.6;
 }
 
-.chart-placeholder {
-  margin-top: 50px;
-  padding: 30px;
-  border: 1px solid #333;
-  border-radius: 12px;
-  text-align: center;
-  background: #181818;
-}
-
-.chart-placeholder p {
-  opacity: 0.5;
-}
-
-@media (max-width: 700px) {
-  .app {
-    padding-top: 25px;
-  }
-
-  .header h1 {
-    font-size: 2.8rem;
-  }
-
-  .result-grid {
-    grid-template-columns: 1fr;
-  }
-}
 .chart-section {
   margin-top: 50px;
 }
@@ -159,11 +138,95 @@ button:hover {
   border: 1px solid #333;
   border-radius: 12px;
   background: #181818;
+  box-sizing: border-box;
 }
 
+/* Tablet */
 @media (max-width: 700px) {
+  .app {
+    width: 90%;
+    padding-top: 25px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
   .chart-container {
     height: 350px;
     padding: 10px;
+  }
+}
+
+/* Telemóveis */
+@media (max-width: 480px) {
+  .app {
+    width: 92%;
+    padding: 20px 0 50px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .calculator form {
+    gap: 16px;
+  }
+
+  .input-unit {
+    gap: 7px;
+  }
+
+  .input-unit span {
+    min-width: 35px;
+    font-size: 0.9rem;
+  }
+
+  .input-unit input {
+    padding: 12px;
+  }
+
+  button {
+    padding: 13px 16px;
+  }
+
+  .results {
+    margin-top: 40px;
+  }
+
+  .result-card {
+    padding: 18px;
+  }
+
+  .result-card strong {
+    font-size: 1.4rem;
+  }
+
+  .chart-section {
+    margin-top: 40px;
+  }
+
+  .chart-container {
+    height: 300px;
+    padding: 5px;
   }
 }
