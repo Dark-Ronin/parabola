@@ -68,14 +68,14 @@ function App() {
             max="90"
           />
 
-          <InputField
+          {/*<InputField
             id="height"
             label="Altura inicial"
             value={height}
             onChange={setHeight}
             unit="m"
             min="0"
-          />
+          />*/}
 
           <InputField
             id="gravity"
